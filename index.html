@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiry Form</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      .column {
+        float: left;
+        width: 45%;
+        padding: 10px;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    label,
+      input[type="text"],select,textarea {
+        font-size: 20px;
+        width: 100%;
+      }
+        input[type="submit"] {
+            font-size: 20px;
+            width: 20%;
+            background-color: #ecf0ec;
+            color: rgb(0, 0, 0);
+            margin: 8px 200px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+      .EnquiryForm {
+        border: 1px solid black;
+        margin: 10px 600px;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="EnquiryForm">
+      <h1>Visitor Enquiry Form</h1>
+        <div class="row">
+          <div class="column">
+            <label for="Fullname">Fullname</label>
+          </div>
+          <div class="column">
+            <input type="text" name="fullname" id = "fullname" placeholder="your full name" />
+          </div>
+          </div>
+          <div class="row">
+          <div class="column">
+            <label for="Fullname">Email</label>
+          </div>
+          <div class="column">
+            <input
+              type="text"
+              id = "email"
+              name="fullname"
+              placeholder="youremail@gmail.com"
+            />
+          </div>
+          </div>
+          <div class="row">
+          <div class="column">
+            <label for="Fullname">Gender</label>
+          </div>
+          <div class="column">
+            <input type="radio"  name="gender" id="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="gender" value="female" />
+            <label for="female">Female</label>
+          </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <label for="Fullname">Location</label>
+            </div>
+            <div class="column">
+                <select name="location"  id="location">
+                    <option value="" disabled selected>--Select your location--</option>
+                    <option value="malacca">Malacca</option>
+                    <option value="miri">Miri</option>
+                    <option value="kuala">Kuala</option>
+                    <option value="kuching">Kuching</option>
+                  </select>
+            </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                  <label for="Fullname">Please Write Your Enquiry</label>
+                </div>
+                <div class="column">
+                   <textarea name = "enquiry" id="enquiry" cols="40" rows="10"></textarea>
+                </div>
+                </div>
+                
+                <div class="row">
+                    <button type="submit" onclick="submit()">Submit</button>
+                    <input type="submit" name="submit" value="Cancel" />
+                </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
